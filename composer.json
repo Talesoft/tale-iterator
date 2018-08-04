@@ -1,0 +1,26 @@
+{
+    "name": "talesoft/tale-iterator",
+    "type": "library",
+    "keywords": ["iterator", "map-iterator", "sprintf-iterator", "prefix-iterator", "suffix-iterator"],
+    "description": "A basic, PSR-7 compatible stream utility library",
+    "license": "MIT",
+    "homepage": "http://docs.talesoft.codes/php/tale/iterator",
+    "authors": [
+        {
+            "name": "Torben Köhn",
+            "email": "torben@talesoft.codes"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tale\\": "src",
+            "Tale\\Test\\": "tests"
+        }
+    },
+    "require-dev": {
+        "talesoft/tale-dev-tool": "0.2.2"
+    }
+}
