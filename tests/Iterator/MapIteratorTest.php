@@ -19,7 +19,8 @@ class MapIteratorTest extends TestCase
      */
     public function testConstruct(): void
     {
-        $obj = new class {};
+        $obj = new class {
+        };
         $resource = stream_context_create();
         $values = new \ArrayIterator([1, 3.4, 'test', true, [], $obj, null, $resource]);
         $mapper = new MapIterator($values);

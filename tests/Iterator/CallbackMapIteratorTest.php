@@ -18,7 +18,8 @@ class CallbackMapIteratorTest extends TestCase
      */
     public function testConstruct(): void
     {
-        $values = new \ArrayIterator([1, 3.4, 'test', true, [], new class {}, null, stream_context_create()]);
+        $values = new \ArrayIterator([1, 3.4, 'test', true, [], new class {
+        }, null, stream_context_create()]);
         $callback = function ($value) {
             return \gettype($value);
         };
