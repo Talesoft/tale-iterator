@@ -16,7 +16,7 @@ class CallbackMapIteratorTest extends TestCase
      * @covers ::getCallback
      * @covers ::map
      */
-    public function testConstruct(): void
+    public function testMap(): void
     {
         $values = new \ArrayIterator([1, 3.4, 'test', true, [], new class {
         }, null, stream_context_create()]);

@@ -5,7 +5,7 @@ namespace Tale\Iterator;
 
 use Traversable;
 
-class CallbackMapIterator extends MapIterator
+class CallbackFilterIterator extends FilterIterator
 {
     private $callback;
 
@@ -14,13 +14,15 @@ class CallbackMapIterator extends MapIterator
      * @param Traversable $iterator
      * @param callable $callback
      */
-    public function __construct(Traversable $iterator, callable $callback)
+    public function __construct(Traversable $iterator, callable $callback = null)
     {
         parent::__construct($iterator);
-        $this->callback = $callback;
+        $this->callback = $callback ?? function ($value) {
+            return !empty($value);
+        };
     }
 
-    /**
+    /**k
      * @return callable
      */
     public function getCallback(): callable
@@ -28,9 +30,9 @@ class CallbackMapIterator extends MapIterator
         return $this->callback;
     }
 
-    public function map()
+    public function accept(): bool
     {
         $callback = $this->callback;
-        return $callback(parent::map(), parent::key(), $this);
+        return $callback(parent::current(), parent::key(), $this);
     }
 }

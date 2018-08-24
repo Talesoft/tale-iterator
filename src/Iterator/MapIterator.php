@@ -3,7 +3,9 @@ declare(strict_types=1);
 
 namespace Tale\Iterator;
 
-class MapIterator extends \IteratorIterator
+use IteratorIterator;
+
+class MapIterator extends IteratorIterator
 {
     public function map()
     {

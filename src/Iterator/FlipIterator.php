@@ -3,7 +3,9 @@ declare(strict_types=1);
 
 namespace Tale\Iterator;
 
-class FlipIterator extends \IteratorIterator
+use IteratorIterator;
+
+class FlipIterator extends IteratorIterator
 {
     public function current()
     {

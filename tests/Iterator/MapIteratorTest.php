@@ -17,7 +17,7 @@ class MapIteratorTest extends TestCase
      * @covers ::map
      * @covers ::current
      */
-    public function testConstruct(): void
+    public function testMap(): void
     {
         $obj = new class {
         };
