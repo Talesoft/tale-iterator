@@ -177,9 +177,9 @@ $filterer = new \RegexIterator($values, '/[a-c]/');
 var_dump(iterator_to_array($filterer));
 /*
 array(3) {
-  [0] => string(7) "a"
-  [1] => string(7) "b"
-  [2] => string(7) "c"
+  [0] => string(1) "a"
+  [1] => string(1) "b"
+  [2] => string(1) "c"
 }
 */
 ```
@@ -229,9 +229,9 @@ $keys = new KeyIterator($values);
 var_dump(iterator_to_array($keys));
 /*
 array(3) {
-  [0] => string(7) "a"
-  [1] => string(7) "b"
-  [2] => string(7) "c"
+  [0] => string(1) "a"
+  [1] => string(1) "b"
+  [2] => string(1) "c"
 }
 
 Compare the output to the CallbackFilterIterator example above
